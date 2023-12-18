@@ -1,0 +1,144 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.App{
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #181818;
+}
+
+.mainImage{
+    margin-top:10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px; 
+    /* box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75); */
+}
+
+
+.image-name{
+    font-style: italic;
+    color:white;
+    font-size: x-small;
+   
+}
+.mainImage img{
+    background-color: #000;
+    width:60vw;
+    height:60vh;
+    /* border-radius: 5px; */
+}
+
+.imageViewer{
+    width: 100vw;
+    height:35vh;
+    bottom: 0;
+    padding:0px;
+    /* padding-bottom: 1rem; */
+    position: absolute;
+    background-color: #1a1a1d;
+  
+}
+.imageViewer img{
+    width:13vw;
+    height:20vh;
+    object-fit: cover;
+    border:1px solid black;
+    cursor: pointer;
+    transition: transform 0.5s ease; 
+}
+.imageViewer img.border{
+    opacity: 0.6;
+    border: 1px solid rgb(19, 19, 32);
+}
+.imageViewer img:hover{
+    transform: scale(1.1);
+    border: 2px solid orange;
+}
+.selected{
+    margin-bottom: 0.5rem;
+}
+.selected > select{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color:#000;
+    border: none;
+    padding:2px;
+    margin-right: 3px;
+    
+}
+
+
+
+    /* multi color dots */
+    .dot{
+        height: 7px;
+        width: 7px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .dot.red{
+        margin-left:5px;
+        background-color: rgb(121, 22, 22);
+    }
+    .dot.yellow{
+        margin-left:5px;
+        background-color: rgb(130, 112, 26);
+    }
+    .dot.green{
+        margin-left:5px;
+        background-color: rgb(10, 127, 18);
+    }
+    .dot.blue{
+        margin-left:5px;
+        background-color: rgb(41, 19, 143);
+    }
+
+.selected > select:focus{
+    outline: none;
+}
+@media screen and (max-width:990px){
+    .mainImage img {
+        width: 74vw;
+        height: 55vh;
+    }
+    .imageViewer img {
+        width: 29vw;
+        height: 23vh;
+        
+    }
+}
+ @media screen and (max-width:600px){
+    .imageViewer img {
+        width: 44vw;
+        height: 23vh;
+    }
+ }
+ @media screen and (max-width:400px){
+    .mainImage img {
+        width: 84vw;
+        height: 49vh;
+    }
+    .imageViewer img {
+        width: 56vw;
+        height: 23vh;
+    }
+    .imageViewer {
+       
+        padding: 16px;
+       
+    }
+ }
+ 
+ .indexImage{
+    color:white;
+ }
